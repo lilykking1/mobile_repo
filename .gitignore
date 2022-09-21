@@ -1,0 +1,101 @@
+# OSX
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcworkspace
+
+# Android/IntelliJ
+android/app/src/main/java/com/*/generated
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+
+# node.js
+node_modules/
+*.log
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle
+*.bundle
+
+# Auto generated assets
+android/app/src/main/res/*/app.json*
+android/app/src/main/res/*/app_*
+android/app/src/main/res/*/node_modules_*
+/ios/assets
+# icons from cryptocurrency-icons lib
+/app/assets/crypto-icons/icons/*.svg
+/app/assets/crypto-icons/properties.ts
+/app/assets/crypto-icons/index.ts
+
+# CocoaPods
+/ios/Pods/
+
+# VS Code
+.vscode
+
+# Expo
+.expo/*
+bin/Exponent.app
+
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Coverage
+/coverage
+
+# Configurations
+.env.staging
+.env.development
+.env.production
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

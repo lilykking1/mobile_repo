@@ -1,0 +1,1 @@
+export const NEWS_LIST_HEADER_HEIGHT = 60;

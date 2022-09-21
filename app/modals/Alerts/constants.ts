@@ -1,0 +1,1 @@
+export const ALERTS_LIST_HEADER_HEIGHT = 60;

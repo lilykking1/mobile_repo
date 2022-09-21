@@ -1,0 +1,26 @@
+declare module '@env' {
+  export const GRAPHQL_API_ENDPOINT: string;
+  export const GRAPHQL_API_WS_ENDPOINT: string;
+  export const GEM_ONRAMP_PARTNER_NAME: string;
+  export const GEM_ONRAMP_PARTNER_ICON_URL: string;
+  export const GEM_ONRAMP_URL: string;
+  export const GEM_ONRAMP_API_KEY: string;
+  export const COINBASE_AUTH_URL: string;
+  export const COINBASE_CLIENT_ID: string;
+  export const TWOFA_QR_PATH: string;
+  export const TWOFA_QR_SECRET: string;
+  export const TWOFA_QR_ISSUER: string;
+  export const AUTH_AUTHENTICATION_ENDPOINT: string;
+  export const AUTH_REGISTER_ENDPOINT: string;
+  export const AUTH_TOKEN_ENDPOINT: string;
+  export const AUTH_LOGOUT_ENDPOINT: string;
+  export const AMPLITUDE_API_KEY: string;
+  export const APPSFLYER_API_KEY: string;
+  export const IOS_APP_ID: string;
+  export const AUTH_EMAIL: string;
+  export const AUTH_PASSWORD: string;
+  export const RISKALYZE_ENDPOINT: string;
+  export const RISKALYZE_CLIENT_ID: string;
+  export const RISKALYZE_HOST: string;
+  export const RISKALYZE_API_KEY: string;
+}

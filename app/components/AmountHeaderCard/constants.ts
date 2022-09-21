@@ -1,0 +1,16 @@
+import { TRANSACTION_STATUS } from '@app/models/Transactions';
+
+export const SUCCESS_STATUSES = [
+  TRANSACTION_STATUS.COMPLETED,
+  TRANSACTION_STATUS.CONFIRMED,
+];
+
+export const WARNING_STATUSES = [
+  TRANSACTION_STATUS.AWAITING_APPROVAL,
+  TRANSACTION_STATUS.PROCESSING,
+];
+
+export const USD_PREFIX = '$';
+export const BTC_PREFIX = '₿ ';
+
+export const GRID_LINES_HEIGHT = 145;

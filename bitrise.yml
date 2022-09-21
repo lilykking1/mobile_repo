@@ -1,0 +1,391 @@
+---
+format_version: '11'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: react-native
+trigger_map:
+  - workflow: Deployment
+    push_branch: main
+  - workflow: Integration
+    push_branch: develop
+  - workflow: PullRequest
+    pull_request_source_branch: '*'
+    pull_request_target_branch: develop
+workflows:
+  DryRun:
+    steps:
+      ### CONFIGURATION ###
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@6: {}
+
+      ### INSTALL DEPENDENCIES ###
+      - cache-pull@2: {}
+      - yarn@0:
+          inputs:
+            - command: install
+            - cache_local_deps: 'yes'
+
+      ### GENERATE CRYPTO-ICONS IN APP ###
+      - yarn@0:
+          inputs:
+            - command: cryptoicons
+
+      ### RUN QUALITY GATES ###
+      - yarn@0:
+          inputs:
+            - command: lint
+      - yarn@0:
+          inputs:
+            - command: test:ci
+
+      ### ANDROID BUILD ###
+      - install-missing-android-tools@3.0:
+          inputs:
+            - gradlew_path: '$BITRISE_SOURCE_DIR/android/gradlew'
+      - file-downloader@1:
+          inputs:
+            - source: '$BITRISEIO_ANDROID_KEYSTORE_URL'
+            - destination: '$HOME/keystores/release.keystore'
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: '$BITRISE_SOURCE_DIR/android/app/build.gradle'
+      - android-build@1:
+          inputs:
+            - project_location: '$BITRISE_SOURCE_DIR/android'
+            - module: app
+            - variant: release
+            - cache_level: only_deps
+            - build_type: aab
+      - sign-apk@1:
+          inputs:
+            - debuggable_permitted: 'false'
+
+      ### IOS BUILD ###
+      - cocoapods-install@2:
+          inputs:
+            - source_root_path: '$BITRISE_SOURCE_DIR/ios'
+      - certificate-and-profile-installer@1:
+          inputs:
+            - install_defaults: 'no'
+            - keychain_path: '$HOME/Library/Keychains/login.keychain-db'
+
+      ### CACHING ###
+      - cache-push@2:
+          inputs:
+            - compress_archive: 'true'
+
+      ### NOTIFY ###
+      - slack@3:
+          inputs:
+            - webhook_url: '$SLACK_APP_WEBHOOK'
+            - channel: '#dev-ci'
+            - webhook_url_on_error: '$SLACK_APP_WEBHOOK'
+            - channel_on_error: '#dev-ci'
+
+  Deployment:
+    steps:
+      ### CONFIGURATION ###
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@6: {}
+      - script@1:
+          inputs:
+            - content: >-
+                #!/usr/bin/env bash
+                # fail if any commands fails
+                set -e
+                # make pipelines' return status equal the last command to exit with
+                a non-zero status, or zero if all commands exit successfully
+                set -o pipefail
+                # debug log
+                set -x
+                bash ./bin/generateEnv
+      ### INSTALL DEPENDENCIES ###
+      - cache-pull@2: {}
+      - yarn@0:
+          inputs:
+            - command: install
+            - cache_local_deps: 'yes'
+
+      ### GENERATE CRYPTO-ICONS IN APP ###
+      - yarn@0:
+          inputs:
+            - command: cryptoicons
+
+      ### ANDROID BUILD ###
+      - install-missing-android-tools@3.0:
+          inputs:
+            - gradlew_path: '$BITRISE_SOURCE_DIR/android/gradlew'
+      - file-downloader@1:
+          inputs:
+            - source: '$BITRISEIO_ANDROID_KEYSTORE_URL'
+            - destination: '$HOME/keystores/release.keystore'
+      - change-android-versioncode-and-versionname@1:
+          inputs:
+            - build_gradle_path: '$BITRISE_SOURCE_DIR/android/app/build.gradle'
+      - android-build@1:
+          inputs:
+            - project_location: '$BITRISE_SOURCE_DIR/android'
+            - module: app
+            - variant: release
+            - cache_level: only_deps
+            - build_type: aab
+      - sign-apk@1:
+          inputs:
+            - debuggable_permitted: 'false'
+
+      ### IOS BUILD ###
+      - cocoapods-install@2:
+          inputs:
+            - source_root_path: '$BITRISE_SOURCE_DIR/ios'
+      - certificate-and-profile-installer@1:
+          inputs:
+            - install_defaults: 'no'
+            - keychain_path: '$HOME/Library/Keychains/login.keychain-db'
+      - set-xcode-build-number@1:
+          inputs:
+            - plist_path: '$BITRISE_SOURCE_DIR/ios/$BITRISE_SCHEME/Info.plist'
+      - xcode-archive@4:
+          inputs:
+            - distribution_method: app-store
+            - cache_level: swift_packages
+
+      ### DEPLOY ###
+      - google-play-deploy@3:
+          inputs:
+            - package_name: com.stackedinvest.android
+            - service_account_json_key_path: '$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL'
+            - track: internal
+            - status: draft
+            - retry_without_sending_to_review: 'true'
+      - deploy-to-itunesconnect-application-loader@1: {}
+      - deploy-to-bitrise-io@2: {}
+
+      ### CACHING ###
+      - cache-push@2:
+          inputs:
+            - compress_archive: 'true'
+
+      ### NOTIFY ###
+      - slack@3:
+          inputs:
+            - webhook_url: '$SLACK_APP_WEBHOOK'
+            - channel: '#dev-ci'
+            - webhook_url_on_error: '$SLACK_APP_WEBHOOK'
+            - channel_on_error: '#dev-ci'
+    envs:
+      - opts:
+          is_expand: false
+        GRAPHQL_API_ENDPOINT: 'https://api.stage.stackedinvest.com/graphql'
+      - opts:
+          is_expand: false
+        GRAPHQL_API_WS_ENDPOINT: 'wss://api.stage.stackedinvest.com/graphql'
+      - opts:
+          is_expand: false
+        GEM_ONRAMP_PARTNER_NAME: Stacked
+      - opts:
+          is_expand: false
+        GEM_ONRAMP_PARTNER_ICON_URL: 'https://app.stackedinvest.com/icons/android-chrome-512x512.png'
+      - opts:
+          is_expand: false
+        GEM_ONRAMP_URL: 'https://onramp.sandbox.gem.co'
+      - opts:
+          is_expand: false
+        COINBASE_AUTH_URL: 'https://www.coinbase.com/oauth/authorize'
+      - opts:
+          is_expand: false
+        COINBASE_CLIENT_ID: 'faab477d06426e9a99a88766688aa0954d3c8e2e32ab1df8b775049882c55d93'
+      - opts:
+          is_expand: false
+        COINBASE_AUTH_PARAMS: 'response_type=code&client_id='
+      - opts:
+          is_expand: false
+        COINBASE_AUTH_PERMISSIONS: 'scope=wallet:accounts:read,wallet:buys:read,wallet:buys:create,wallet:payment-methods:read,wallet:sells:read,wallet:sells:create,wallet:transactions:read,wallet:transactions:request,wallet:user:read,wallet:supported-assets:read,wallet:trades:create,wallet:trades:read&account=all'
+      - opts:
+          is_expand: false
+        TWOFA_QR_PATH: 'otpauth://totp/Stacked:'
+      - opts:
+          is_expand: false
+        TWOFA_QR_SECRET: '?secret='
+      - opts:
+          is_expand: false
+        TWOFA_QR_ISSUER: '&issuer=Stacked'
+      - opts:
+          is_expand: false
+        AMPLITUDE_API_KEY: 'fad75a2e4e87cdd62ef59024d76adec2'
+      - opts:
+          is_expand: false
+        APPSFLYER_API_KEY: 'ABZusuEksvXdcc7siVwqmd'
+      - opts:
+          is_expand: false
+        IOS_APP_ID: '1543471885'
+      - opts:
+          is_expand: false
+        AUTH_AUTHENTICATION_ENDPOINT: 'https://r7obgqz7tg.execute-api.us-west-2.amazonaws.com/stage/auth/authentication'
+      - opts:
+          is_expand: false
+        AUTH_REGISTER_ENDPOINT: 'https://r7obgqz7tg.execute-api.us-west-2.amazonaws.com/stage/auth/register'
+      - opts:
+          is_expand: false
+        AUTH_TOKEN_ENDPOINT: 'https://r7obgqz7tg.execute-api.us-west-2.amazonaws.com/stage/auth/token'
+      - opts:
+          is_expand: false
+        AUTH_LOGOUT_ENDPOINT: 'https://login.stackedinvest.com/v2/logout?access_token='
+      - opts:
+          is_expand: false
+        RISKALYZE_API_KEY: 'Apikey vBA8qpEFr7aAHcYDUUMTy9iGKr2XxZuUQpj7y6rsdEFu7pgGx63H2pHrq3xqhWjw'
+      - opts:
+          is_expand: false
+        RISKALYZE_ENDPOINT: 'https://api2.riskalyze.com/ap/v1/questionnaires'
+      - opts:
+          is_expand: false
+        RISKALYZE_CLIENT_ID: '719886545'
+      - opts:
+          is_expand: false
+        RISKALYZE_HOST: 'api2.riskalyze.com'
+  Integration:
+    steps:
+      ### CONFIGURATION ###
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@6: {}
+
+      ### INSTALL DEPENDENCIES ###
+      - cache-pull@2: {}
+      - yarn@0:
+          inputs:
+            - command: install
+            - cache_local_deps: 'yes'
+
+      ### GENERATE CRYPTO-ICONS IN APP ###
+      - yarn@0:
+          inputs:
+            - command: cryptoicons
+
+      ### RUN QUALITY GATES ###
+      - yarn@0:
+          inputs:
+            - command: lint
+      - yarn@0:
+          inputs:
+            - command: test:ci
+
+      ### ANDROID BUILD ###
+      # - install-missing-android-tools@3.0:
+      #     inputs:
+      #     - gradlew_path: "$BITRISE_SOURCE_DIR/android/gradlew"
+      - react-native-bundle@1:
+          inputs:
+            - entry_file: index.js
+            - dev: 'false'
+            - out: android/app/src/main/assets/index.android.bundle
+            - assetRoots: android/app/src/main/res
+            - platform: android
+            - binary_path: './node_modules/.bin'
+      # - android-build-for-ui-testing@0:
+      #     inputs:
+      #     - project_location: "$BITRISE_SOURCE_DIR/android"
+      #     - module: app
+      #     - variant: debug
+      #     - cache_level: only_deps
+
+      ### IOS BUILD ###
+      # - cocoapods-install@2:
+      #     inputs:
+      #     - source_root_path: "$BITRISE_SOURCE_DIR/ios"
+      - react-native-bundle@1:
+          inputs:
+            - entry_file: index.js
+            - dev: 'false'
+            - out: ios/main.jsbundle
+            - assetRoots: ios
+            - platform: ios
+            - binary_path: './node_modules/.bin'
+      # - certificate-and-profile-installer@1:
+      #     inputs:
+      #     - install_defaults: 'no'
+      #     - keychain_path: "$HOME/Library/Keychains/login.keychain-db"
+      # - xcode-build-for-test@1:
+      #     inputs:
+      #     - cache_level: swift_packages
+
+      ### CACHING ###
+      - cache-push@2:
+          inputs:
+            - compress_archive: 'true'
+
+      ### NOTIFY ###
+      - slack@3:
+          inputs:
+            - webhook_url: '$SLACK_APP_WEBHOOK'
+            - channel: '#dev-ci'
+            - webhook_url_on_error: '$SLACK_APP_WEBHOOK'
+            - channel_on_error: '#dev-ci'
+
+  PullRequest:
+    steps:
+      ### CONFIGURATION ###
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@6: {}
+
+      ### INSTALL DEPENDENCIES ###
+      - cache-pull@2: {}
+      - yarn@0:
+          inputs:
+            - command: install
+            - cache_local_deps: 'yes'
+
+      ### GENERATE CRYPTO-ICONS IN APP ###
+      - yarn@0:
+          inputs:
+            - command: cryptoicons
+
+      ### RUN QUALITY GATES ###
+      - yarn@0:
+          inputs:
+            - command: lint
+      - yarn@0:
+          inputs:
+            - command: test:ci
+
+      ### CACHING ###
+      - cache-push@2:
+          inputs:
+            - compress_archive: 'true'
+
+      ### NOTIFY ###
+      - slack@3:
+          inputs:
+            - webhook_url: '$SLACK_APP_WEBHOOK'
+            - channel: '#dev-ci'
+            - webhook_url_on_error: '$SLACK_APP_WEBHOOK'
+            - channel_on_error: '#dev-ci'
+
+app:
+  envs:
+    - PROJECT_LOCATION: android
+      opts:
+        is_expand: false
+    - MODULE: app
+      opts:
+        is_expand: false
+    - opts:
+        is_expand: false
+      VARIANT: Debug
+    - BITRISE_PROJECT_PATH: ios/StackedInvest.xcworkspace
+      opts:
+        is_expand: false
+    - BITRISE_SCHEME: StackedInvest
+      opts:
+        is_expand: false
+    - BITRISE_EXPORT_METHOD: development
+      opts:
+        is_expand: false
+    - SLACK_APP_WEBHOOK: https://hooks.slack.com/services/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
+      opts:
+        is_expand: false
+meta:
+  bitrise.io:
+    stack: osx-xcode-13.4.x
+    machine_type_id: g2.4core

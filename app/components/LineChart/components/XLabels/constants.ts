@@ -1,0 +1,1 @@
+export const REMOVED_ELEMENTS_QUANTITY = 4;

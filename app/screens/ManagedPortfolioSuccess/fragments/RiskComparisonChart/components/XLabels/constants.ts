@@ -1,0 +1,1 @@
+export const LABEL_DEFAULT_PADDING = 30;

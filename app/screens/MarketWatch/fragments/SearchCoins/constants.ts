@@ -1,0 +1,1 @@
+export const STICKY_SEARCH_HEADER_THRESHOLD = 55;

@@ -1,0 +1,2 @@
+export const EXCHANGE_CARD_WIDTH = 206;
+export const EXCHANGE_CARD_HEIGHT = 140;

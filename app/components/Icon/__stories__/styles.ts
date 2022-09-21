@@ -1,0 +1,32 @@
+import { palette } from '@app/theme';
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  dark: {
+    backgroundColor: palette.purpleZodiac,
+    color: palette.whiteZircon,
+  },
+  icon: {
+    alignItems: 'center',
+    borderRadius: 4,
+    justifyContent: 'center',
+    margin: 4,
+    paddingVertical: 18,
+    width: 108,
+  },
+  label: {
+    fontSize: 10,
+    marginTop: 12,
+  },
+  light: {
+    backgroundColor: palette.white,
+    color: palette.purpleZodiac,
+  },
+});
+
+export default styles;

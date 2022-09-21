@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  # TODO: update with reference to client-beef repo schemas
+  # - "../../components/client-beef/src/graphql/schema/*.graphql"
+  # - |
+  #   scalar Upload
+generates:
+  app/gql/types/index.ts:
+      documents:
+      - app/gql/queries/**/*.ts
+      - app/gql/fragments/**/*.ts
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+config:
+  maybeValue: T | undefined
+  preResolveTypes: true

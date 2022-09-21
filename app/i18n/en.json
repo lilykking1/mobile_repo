@@ -1,0 +1,1388 @@
+{
+  "components": {
+    "amountHeaderCard": {
+      "depositFromCoinbase": "Deposit from Coinbase",
+      "investedAmount": "Invested Amount",
+      "requiredDepositAmount": "Required Deposit Amount"
+    },
+    "individualCoinsCard": {
+      "assetLabel": "Asset",
+      "lendingLabel": "Lending",
+      "valuesAllocationLabel": "Values /\nAllocation"
+    },
+    "lineChart": {
+      "noChartData": "No Chart Data"
+    },
+    "news": {
+      "title": "News"
+    },
+    "riskCard": {
+      "label": "RISK"
+    },
+    "riskGroupTable": {
+      "potentialGainAvg": "Potential\nGain Avg",
+      "potentialLossAvg": "Potential\nLoss Avg",
+      "riskGroups": "Risk Groups",
+      "riskNumber": "Risk Number"
+    },
+    "riskAppetiteCard": {
+      "title": "My Risk Appetite",
+      "range": "Estimated range"
+    },
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "toggle": {
+      "on": "On",
+      "off": "Off"
+    },
+    "quickConnect": "Quick Connect",
+    "makeDeposit": "Make Deposit",
+    "seeAllExchanges": "See All Exchanges",
+    "walletAddressInput": {
+      "pasteAction": "Paste",
+      "errors": {
+        "invalidWalletAddress": "Invalid wallet number. Please ensure you are entering a valid %{coin} address"
+      }
+    },
+    "assetsVariationTable": {
+      "assets": "Asset",
+      "current": "Current",
+      "end": "End",
+      "noAssets": "No Assets"
+    },
+    "riskSlider": {
+      "lowRisk": "Low Risk",
+      "highRisk": "High Risk"
+    },
+    "depositStatusCard": {
+      "fundsDeposited": "Funds deposited",
+      "depositInProgress": "Deposit in progress",
+      "processing": "Processing",
+      "awaitingApproval": "Awaiting approval",
+      "cryptoDeposited": "Crypto deposited",
+      "congratulations": "Congratulations!",
+      "confirmation": "Confirmation: ",
+      "viewPortfolioButton": "View my portfolio",
+      "portfolioReadyText": "Your portfolio is funded and ready to view",
+      "processingDepositMessage": "Bank purchases may take up to 3-5 business days. Your coins will automatically be deposited into your Stacked wallet after processing is complete.",
+      "estimatedDepositDate": "Estimated deposit date:",
+      "depositDate": "Deposit date:"
+    },
+    "waitingSpinner": {
+      "defaultLabelInMinutes": "in %{countdown} min",
+      "defaultLabelInSeconds": "in %{countdown} sec"
+    }
+  },
+  "navigation": {
+    "back": "Back"
+  },
+  "exchanges": {
+    "title": "%{name} Setup",
+    "actions": {
+      "withdraw": "Withdraw",
+      "deposit": "Deposit",
+      "swap": {
+        "title": "Swap",
+        "disabled": "You are not able to swap on this account because it is connected to a Stacked Web product",
+        "notSupported": "This exchange does not support swaps through Stacked"
+      }
+    },
+    "status": {
+      "notConnected": "Not connected",
+      "notConfigured": "Not configured"
+    }
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "getStarted": "Get Started",
+    "steps": {
+      "welcome": {
+        "title": "Welcome\nto Stacked",
+        "text": "Manage your assets & instantly invest in pre-built portfolios and strategies from leading hedge funds and traders."
+      },
+      "connect": {
+        "title": "Simple\nconnect",
+        "text": "Connect your exchange accounts to Stacked and put your crypto portfolio on auto-pilot."
+      },
+      "control": {
+        "title": "Control\nyour portfolio",
+        "text": "Seamlessly manage your entire portfolio, track profits over-time, automatically rebalance and swap assets instantly."
+      },
+      "diversify": {
+        "title": "Diversify\nyour assets",
+        "text": "Invest in pre-built crypto indexes, lend your coins for interest returns and automatically rebalance to maintain proper exposure."
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "action": {
+      "profile": {
+        "label": "Profile",
+        "text": "Edit your account profile"
+      },
+      "about": "About",
+      "termsAndConditions": "Terms & Conditions",
+      "feedback": {
+        "title": "Feedback",
+        "submitted": "Submitted!",
+        "error": "Error",
+        "captchaError": "Captcha Error"
+      },
+      "pushNotifications": "Push notifications",
+      "darkMode": "Dark mode"
+    }
+  },
+  "marketWatch": {
+    "marketWatch": "Market Watch",
+    "usAvailable": "US",
+    "forAll": "All",
+    "searchResults": "Search results",
+    "sort": "Sort",
+    "findCoins": "Find Coins",
+    "cap": "Cap",
+    "vol": "24h Vol",
+    "buy": "Buy %{symbol}",
+    "buyWithFiat": "Buy %{symbol} with fiat",
+    "view": "View",
+    "loadMore": "Load more",
+    "trending": "Trending",
+    "topMovers": "Top Movers"
+  },
+  "news": {
+    "title": "News"
+  },
+  "coinDetail": {
+    "buybox": {
+      "buy": "Buy",
+      "manage": "Manage",
+      "youHave": "You have"
+    },
+    "keyMetrics": {
+      "title": "Key metrics",
+      "price": "Price",
+      "24hrChange": "24hr Change",
+      "24hrRealVol": "24hr Real Vol",
+      "liquidMarketcap": "Liquid Marketcap",
+      "liquidSupply": "Liquid Supply",
+      "maxSupply": "Max Supply"
+    },
+    "priceMetrics": {
+      "title": "Price metrics",
+      "1hrLowHigh": "1hr Low / 1hr High",
+      "24hrLowHeight": "24hr Low / 24hr High",
+      "athUsd": "ATH (USD)",
+      "athDate": "ATH Date",
+      "cycleLowUsd": "Cycle Low (USD)",
+      "cycleLowDate": "Cycle Low Date"
+    },
+    "showMore": "Show more",
+    "gemCard": {
+      "bankPurchase": "Bank purchase",
+      "debitPurchase": "Debit purchase",
+      "inProgress": " in progress",
+      "fundsDeposited": "Funds deposited",
+      "confirmation": "Confirmation: ",
+      "depositInProgress": "Deposit in progress",
+      "depositDate": "Deposit date",
+      "estimatedDepositDate": "Estimated deposit date",
+      "depositFailed": "The deposit failed. Please contact your bank or try againg  with different payment method.",
+      "bankPurchaseDisclaimer": "Bank purchases may take up to 3-5 business days. Your coins will automatically be deposited into your Stacked wallet after processing is complete",
+      "debitCardPurchaseDisclamer": "Debit card purchases may take up to 20 minutes. Your coins will automatically be deposited into your Stacked wallet after processing is complete.",
+      "status": {
+        "received": "Received",
+        "confirmed": "Confirmed",
+        "awaitingApproval": "Awaiting approval",
+        "processing": "Processing",
+        "failed": "Failed"
+      },
+      "actions": {
+        "tryAgain": "Try Again",
+        "viewMyPortfolio": "View My Portfolio",
+        "cancelAndRefund": "Cancel and Refund",
+        "continueCurrentBalance": "Continue with current balance",
+        "youMustDeposit": "You must deposit at least $"
+      }
+    }
+  },
+  "fields": {
+    "fullName": {
+      "title": "Full name"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "password": {
+      "title": "Password"
+    },
+    "passwordConfirmation": {
+      "title": "Confirm password"
+    },
+    "oneTimeCode": {
+      "title": "One-time Code",
+      "placeholder": "One-time code",
+      "helper": "Enter a 6 digit code"
+    },
+    "authorizationCode": {
+      "title": "Authorization Code"
+    },
+    "recoveryCode": {
+      "title": "Recovery Code"
+    },
+    "apiKey": {
+      "title": "Api Key",
+      "placeholder": "Ex: nEl4Np0dfiMzomjEygNVYWUa12qmm"
+    },
+    "secretKey": {
+      "title": "Secret Key",
+      "placeholder": "Ex: nEl4Np0dfiMzomjEygNVYWUa12qmm"
+    },
+    "accountName": {
+      "title": "Account name"
+    }
+  },
+  "modals": {
+    "questionsModal": {
+      "yes": "Yes",
+      "no": "No",
+      "acc": "Accumulation",
+      "preserv": "Preservation",
+      "income": "Income",
+      "retire": "Retirement",
+      "short": "Short-term",
+      "very-imp": "Very Important",
+      "important": "Important",
+      "somewhat": "Somewhat",
+      "doesnt": "Doesn't matter"
+    },
+    "cognitoFailure": {
+      "title": "Sorry, Stacked is not available for you",
+      "subtitle": "Due to results from your identitfy verification, the Stacked app will not be available to you.\n\n Your Stacked profile has been suspended. If you believe this has happened in error, please contact customer service with the form below.",
+      "actions": {
+        "customerService": "Customer Service"
+      }
+    },
+    "customerService": {
+      "title": "Customer Service",
+      "subtitle": "Your account has been suspended",
+      "placeholderForm": "If you believe your Stacked account has been suspended in error, please type a message for our customer service team to review...",
+      "actions": {
+        "submit": "Submit"
+      },
+      "submissionSuccess": {
+        "title": "Thank you for submitting your request",
+        "subtitle": "Our team will reach out to you with further information once your case is reviewed."
+      }
+    },
+    "kycRequired": {
+      "title": "Identity verification required",
+      "subtitle": "Before funding your portfolio, you must complete our identity verification process",
+      "actions": {
+        "submit": "Proceed to Verification",
+        "cancel": "Go Back"
+      }
+    },
+    "qrCodeScanner": {
+      "cameraPermissionMessage": "Stacked would like permission to access your camera so that you may scan wallet QR codes"
+    },
+    "alerts": {
+      "title": "Notifications",
+      "markAllRead": "Mark all as read"
+    },
+    "coinbaseConfigurationConnected": {
+      "title": "Your Coinbase account is currently connected",
+      "action": {
+        "placeholder": "Albinda_coinbase",
+        "remove": "Remove"
+      }
+    },
+    "coinbaseConfigurationPrompt": {
+      "title": "Connect Coinbase in just a few clicks",
+      "acknowledgement": "By checking this box you agree to comply with the exchange’s terms of service.",
+      "action": {
+        "connect": "Connect account",
+        "remove": "Remove"
+      }
+    },
+    "coinbaseConfigurationReprompt": {
+      "title": "Your Coinbase account requires reauthorization",
+      "action": {
+        "placeholder": "Albinda_coinbase",
+        "reconnect": "Reconnect",
+        "remove": "Remove"
+      }
+    },
+    "coinbaseConfigurationSuccess": {
+      "title": "Your Coinbase account has connected succesfully",
+      "action": {
+        "visit": "Visit Stacks marketpalce",
+        "dashboard": "Go to dashboard"
+      }
+    },
+    "locationSelector": {
+      "country": "Select your country",
+      "state": "Select your state",
+      "hintTextCountry": "Your country",
+      "hintTextState": "State"
+    },
+    "resetPasswordConfirmation": {
+      "title": "Check your email",
+      "text": {
+        "instructions": "Please, check the email address %{email} for instructions to reset your password."
+      },
+      "action": {
+        "resendEmail": "Resend email"
+      }
+    },
+    "exchangeConfigurationPrompt": {
+      "title": "Which exchange do you use?"
+    },
+    "exchangeSelectConfigurationPrompt": {
+      "title": "Select exchange to start use this stack",
+      "action": {
+        "next": "Next",
+        "cancel": "Cancel",
+        "add": "Add exchange",
+        "remove": "Remove from my portfolio"
+      }
+    },
+    "exchangeConfigurationSetup": {
+      "text": {
+        "agreement": "By checking this box you agree to comply with the exchange’s terms of service."
+      },
+      "action": {
+        "test": "Test connection",
+        "save": "Save Exchange"
+      }
+    },
+    "manageCoins": {
+      "actionLabels": {
+        "swap": "Swap in Stacked Wallet",
+        "withdraw": "Withdraw from Stacked Wallet"
+      }
+    },
+    "notAvailableLocation": {
+      "title": "Sorry, Stacked is not available in",
+      "subtitle": "Due to your current location you will not be able to use the Stacked app at this time. We apologize for the inconvienence."
+    },
+    "sortBy": {
+      "title": "Sort by",
+      "menuOptions": {
+        "sortAtoZ": "Name A→Z",
+        "sortZtoA": "Name Z→A",
+        "price": "Price",
+        "marketCap": "Market Cap",
+        "volume24H": "Volume 24H"
+      }
+    },
+    "faq": {
+      "title": "FAQ"
+    },
+    "twoFactorConfigurationCode": {
+      "title": "Enter your 2FA code",
+      "text": {
+        "instructions": "Enter the provided one-time code below"
+      },
+      "action": {
+        "continue": "Continue",
+        "skip": "Skip for now"
+      }
+    },
+    "twoFactorConfigurationSetup": {
+      "title": "Secure your account",
+      "text": {
+        "instructions": "Open your preferred authenticator app and add enter the below information"
+      },
+      "validations": {
+        "authCodeCharacters": "The 2FA Setup Key must be a 16 character long text.",
+        "authCodeRequired": "You must enter a 2FA Setup Key."
+      },
+      "action": {
+        "enable": "Enable 2FA"
+      }
+    },
+    "twoFactorConfigurationRecovery": {
+      "title": "Almost there!",
+      "text": {
+        "instructions": "Copy this recovery code and keep it somewhere safe. You’ll need it if you ever need to log in without your device.",
+        "safelyRecorded": "I have safely recorded this code"
+      },
+      "action": {
+        "continue": "Finish 2FA Setup"
+      }
+    },
+    "twoFactorConfigurationPrompt": {
+      "title": "Safety First",
+      "text": {
+        "firstInstruction": "We highly recommended you enable two-factor authentication to protect your account.",
+        "secondInstruction": "For your own security, you will not be able to use most features on the Stacked app until this is enabled."
+      },
+      "action": {
+        "protectAccount": "Protect my account"
+      }
+    },
+    "twoFactorConfigurationBlock": {
+      "title": "Safety First",
+      "text": {
+        "instructions": "For your own security, you will not be able to use this feature until 2FA is enabled. "
+      },
+      "action": {
+        "continue": "Continue 2FA Setup"
+      }
+    },
+    "twoFactorVerification": {
+      "title": "Verify your identity",
+      "text": {
+        "instructions": "Please enter the verification code from your authenticator app"
+      },
+      "action": {
+        "continue": "Continue"
+      }
+    },
+    "twoFactorConfigurationQr": {
+      "navTitle": "Two-factor authentication",
+      "title": "Safety First",
+      "text": {
+        "instructions": "Scan the QR Code below using your preferred authenticator app",
+        "oneTimeCode": "Enter the provided one-time code below"
+      },
+      "action": {
+        "continue": "Continue"
+      }
+    },
+    "stacksFilter": {
+      "filter": "Filter",
+      "exchanges": "Exchanges supported",
+      "time": "Time on platform",
+      "totalReturns": "Total returns over",
+      "applyFilters": "Apply filters",
+      "clearFilters": "Clear filters",
+      "any": "Any",
+      "moreThan1Month": "More than 1 month",
+      "moreThan3Months": "More than 3 months",
+      "moreThan6Months": "More than 6 months",
+      "moreThan1Year": "More than 1 year"
+    },
+    "periodFilter": {
+      "period": "Period"
+    },
+    "dotsActions": {
+      "title": "More",
+      "retake": "Retake Risk Assessment",
+      "done": "Close portfolio",
+      "exchange": {
+        "edit": "Rename",
+        "delete": "Delete Exchange",
+        "editTitle": "Rename Exchange Account",
+        "btnSave": "Save",
+        "inputTitle": "Exchange Name",
+        "deleteTitle": "Are you sure you want to\nremove this exchange\naccount from Stacked?",
+        "deleteSubTitle": "You can always add the\naccount again later",
+        "btnConfirmDelete": "Yes, Delete Account",
+        "btnCancelDelete": "Cancel"
+      }
+    },
+    "closePortfolio": {
+      "title": "Are you sure you want to close your portfolio and withdraw funds?",
+      "subtitle": "We will need to convert all existing holdings to BTC. Any coins you have lending will have a time delay before they can be converted.",
+      "actions": {
+        "proceed": "Proceed",
+        "goBack": "Go Back"
+      }
+    },
+    "Interval": {
+      "allTime": "All time",
+      "ytd": "Year to Date",
+      "5years": "5 years",
+      "year": "1 year",
+      "6months": "6 months",
+      "3months": "3 months",
+      "1month": "1 month",
+      "1week": "1 week",
+      "24hours": "24 hours"
+    },
+    "IntervalShortLabels": {
+      "allTime": "All",
+      "5years": "5Y",
+      "year": "1Y",
+      "3months": "3M",
+      "1month": "1M",
+      "1week": "1W",
+      "24hours": "24H"
+    },
+    "stackDetails": {
+      "title": "Stack Details",
+      "text": {
+        "supportedExchanges": "Supported Exchanges",
+        "stackComposition": "Stack Composition",
+        "suggestedInterests": "You might also be interested in"
+      },
+      "table": {
+        "asset": "Asset",
+        "composition": "Composition",
+        "currentPrice": "Current Price"
+      },
+      "actions": {
+        "setup": "Set Up"
+      },
+      "chartFilter": {
+        "week": "1w",
+        "month": "1m",
+        "biannual": "6m",
+        "all": "All"
+      },
+      "asset": "Asset",
+      "composition": "Composition",
+      "currentPrice": "Current Price"
+    },
+    "coinDetails": {
+      "learnMore": "Learn More",
+      "paragraph": "The average signal is then applied to an each crypto asset and the signals are weighted according to the volatility of each asset. The average signal is then applied to an each crypto asset and the signals are weighted according to the volatility of each asset."
+    },
+    "removeStack": {
+      "cancel": "Cancel",
+      "noUpdate": "Continue without updating",
+      "paragraph": "This stack will be removed from your portfolio, would you like to manually rebalance your portfolio?",
+      "update": "Update my Portfolio"
+    },
+    "stackRebalanceError": {
+      "error": "Error",
+      "message": "An error occurred while attempting to add your Stack",
+      "tryAgain": "Try Again",
+      "cancel": "Cancel"
+    },
+    "stackRebalanceSuccess": {
+      "success": "Success",
+      "message": "Your Stack has been added!",
+      "dashboard": "Go to Dashboard",
+      "marketplace": "Back to Marketplace (Invest)"
+    },
+    "stackAlmostReady": {
+      "description": "Stacked will convert your %{symbol}%{amount} to the following assets:",
+      "title": "Almost Ready"
+    },
+    "themeSelection": {
+      "title": "Choose your experience",
+      "message": "You may always change your theme later from your User Settings page"
+    },
+    "changePassword": {
+      "header": "Change Password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "repeatNewPassword": "Repeat new password",
+      "changePassword": "Change Password",
+      "errorIncorrectPassword": "Incorrect password",
+      "errorNotMatchRuleSpecialChar": "Password should have at least one special character (!@$#%^&*(){}[]:;<>,.?~-+=_|/\\)",
+      "errorNotMatchRuleCapital": "Password should have at least one capital letter (A-Z)",
+      "errorNotMatchRuleLowercase": "Password should have at least one lowercase letter (a-z)",
+      "errorNotMatchRuleNumber": "Password should have at least one number (0-9)",
+      "errorNotMatchRuleMinLength": "Password should have at least six characters",
+      "errorNotMatchNewPassword": "Does not match new password"
+    },
+    "withdrawSuccess": {
+      "title": "Withdraw",
+      "descriptionPrefix": "You successfully sent",
+      "descriptionSuffix": "to",
+      "button": "Back to Wallet",
+      "transactionHint": "TxID"
+    },
+    "coinSelection": {
+      "title": "Select Coin",
+      "searchPlaceholder": "Find coin"
+    },
+    "selectNetwork": {
+      "title": "Select Network",
+      "menuOptions": {
+        "ethMainnet": "Ethereum Mainnet",
+        "btcNetwork": "Bitcoin Network",
+        "binanceSmartChain": "Binance Smart Chain"
+      }
+    },
+    "riskReAssessment": {
+      "lowerRisk": {
+        "title": "You are about to change your Risk Number",
+        "subtitle": "Changes to your Risk Number could change coin allocations and affect portfolio results",
+        "actions": {
+          "cancel": "Cancel",
+          "changeNumber": "Change Number"
+        }
+      },
+      "higherRisk": {
+        "title": "You cannot manually raise your Risk Number",
+        "subtitle": "You must retake the Risk Assessment to increase your Risk Number",
+        "actions": {
+          "keepCurrentNumber": "Keep Current Number",
+          "reAssessRisk": "Reassess Risk"
+        }
+      }
+    },
+    "riskReTakeAssessment": {
+      "title": "Are you sure you want to\nreassess your Risk Number?",
+      "subtitle": "You will be required to retake the Risk\nAssessment to receive a new Risk Number\nand portfolio. Trading fees will apply.",
+      "actions": {
+        "cancel": "Cancel",
+        "retake": "Retake Assessment"
+      }
+    },
+    "depositMethod": {
+      "title": "Deposit method"
+    }
+  },
+  "screens": {
+    "closePortfolioConversion": {
+      "title": "Close Portfolio",
+      "conversionWarningMessage": "We will need to convert your existing holdings to BTC in order to send the proceeds to your wallet",
+      "productListTitle": "Products will be converted to BTC and transferred",
+      "conversionCardTitle": "Amount to convert",
+      "withdrawingTo": "Withdrawing funds to:",
+      "confirmAndTransferButtonLabel": "Confirm and Transfer Assets",
+      "cancelClosingButtonLabel": "Cancel Closing My Portfolio",
+      "convertingProductLabelInMinutes": "Converting in %{countdown} min",
+      "convertingProductLabelInSeconds": "Converting in %{countdown} sec",
+      "error": {
+        "headerTitle": "Close Portfolio",
+        "title": "Something went wrong.\nPlease try again.",
+        "action": {
+          "primary": "Go Back",
+          "secondary": "Cancel"
+        }
+      }
+    },
+    "cognito": {
+      "title": "Personal Info"
+    },
+    "individualCoinsDetails": {
+      "title": "Individual Coins",
+      "initialInvestment": "Initial Investment",
+      "footerIndividualCoinsMessageContent": "This asset class represents individually purchased and held cryptocurrencies that are part of your overall Managed Portfolio.",
+      "footerLendingMessageContent": "Lending is the process of temporarily loaning your coins to different borrowers on the blockchain in return for interest payments. Stacked will automatically lend certain individual coins so you can collect additional income through compound interest over time.",
+      "footerLendingMessageTitle": "Lending"
+    },
+    "managedAssetsDetails": {
+      "title": "Managed Assets",
+      "initialInvestment": "Initial Investment",
+      "footerMessageContent": "This asset class includes groups of coins representing different themes. These groups are auomatically rebalanced back to their allocation targets at the intervals displayed above."
+    },
+    "resetPassword": {
+      "title": "Change your password",
+      "text": {
+        "instructions": "Enter a new password below to change your password."
+      },
+      "action": {
+        "resetPassword": "Reset password",
+        "navigateBack": "Back to login"
+      }
+    },
+    "prequalification": {
+      "prequal": "Pre-Qualification",
+      "make-sure": "Let's make sure you're \n a good fit",
+      "verify": "Let us verify if Managed Portfolios are right for \n you with a few simple questions.",
+      "1m": "Is your net worth over $1M?",
+      "200k": "Is your annual income over \n $200k?",
+      "qualifications": "Do you hold qualifications \n or accreditations from a \n recognized educational \n institution?",
+      "unqualified": "You did not meet our requirements",
+      "unqualifiedMessage": "Unfortunately, it doesn’t look like Managed \nPortfolios are the right choice for you based on your investment profile.",
+      "dontworry": "Don’t worry, you can still research coins and make \nyour own investments in Market Watch.",
+      "investing": " Investing in crypto is different from other types of \n investments and has its own risks. ",
+      "checkout": "Check out our video ",
+      "differs": "\n on how investing in crypto differs from other assets",
+      "experience": "Do you have experience \ninvesting in crypto assets?",
+      "expyears": "How many years of experience do you have\ninvesting or trading higher risk or derivative \n\ninstruments?",
+      "income": "Income",
+      "employed": "Are you currently employed?",
+      "household": "Annual Household Income",
+      "networth": "Net Worth",
+      "liquid": "Liquid net worth",
+      "30000": "$30,000",
+      "howmuch": "How much do you \nwant to invest?",
+      "includes": "This includes experience trading stocks, options,\n futures, and other currencies.",
+      "goal": "What is your investment goal?",
+      "acheive": "In how many years do you want to \nacheive your goal?",
+      "liquidimp": "How important is liquidity \nto you?",
+      "alt": "How much of your current investment portfolio \ndo you intent to invest into alternatives?",
+      "congrats": "Congratulations",
+      "goodfit": "It looks like your investor profile is a good fit for Managed Portfolios!",
+      "nextstep": "The next step is to take a Risk Assessment so that we can learn more about your individual investing preferences.",
+      "prequalTitle": "Prequalification",
+      "accStatusTitle": "Accredited Status",
+      "investorProfileTitle": "Investor Profile",
+      "expTitle": "Experience",
+      "investingTitle": "Investing",
+      "select": "Select",
+      "next": "Next",
+      "proceed": "Proceed",
+      "risk": "Continue to Risk Assessment",
+      "market": "Go to Market Watch",
+      "faqAccTitle": "Accredited Status",
+      "faqAccSubTitle": "What is networth?",
+      "faqAccBody1": "An individual’s net worth is calculated as an individual’s total assets minus total liabilities. Assets include but are not limited to: real estate, equity and fixed income investments, private company securities, vehicles, annuities and insurance, cash and cash equivalents, and other property that can be valued and converted to cash. Money in your bank account, retirement savings, and any personal property that you own are included as part of your net worth. Liabilities include all outstanding debt borne by the individual.",
+      "faqAccBody2": "The primary residence is not counted as an asset in the net worth calculation. The term “primary residence” is commonly understood to mean the home where a person lives the most of the time.",
+      "faqAccBody3": "In general, debt secured by the primary residence (such as a mortgage or home equity line of credit) is not counted as a liability in the net worth calculation if the estimated fair market value of the residence is greater than the amount of debt secured by it.",
+      "faqAccBody4": "However, if the amount of debt secured by the residence has increased in the 60 days preceding the sale of securities to the investor (other than in connection with the acquisition of the primary residence), then the amount of that increase is included as a liability in the net worth calculation, even if the estimated value of the residence is greater than the amount of debt secured by it. The purpose of this provision is to deter individuals from incurring debt secured by their primary residence for the purpose of inflating their net worth to qualify as accredited investors in purchasing securities.",
+      "faqAccBody5": "If the amount of debt secured by the primary residence is greater than the estimated fair market value of the residence, then the excess is included as a liability in the net worth calculation. Where the amount of secured debt is greater than the value of the primary residence, such as when a mortgage is “underwater,” the excess is counted as a liability when calculating net worth.",
+      "faqAccBody6": "What is an accredited investor?",
+      "faqAccBody7": "Individuals and entities can qualify as an Accredited Investor. For the purpose of this memo, the focus will be on the individual. Individuals may qualify as accredited investors based on income and wealth thresholds, or if professional criteria are met.",
+      "faqAccBody8": "An individual qualifies as an accredited investor if the individual:",
+      "faqAccBody9": "Possesses a net worth of over $1 million, excluding primary residence. This threshold can be met on an individual basis or with a spouse or partner.",
+      "faqAccBody10": "Reports gross income of over $200,000(individually) or $300,000(with spouse or partner) in each of the prior two years, and reasonably expects the same for the current year.",
+      "faqAccBody11": "Is an investment professional in good standing holding the general securities representative license(Series 7), the investment adviser representative license(Series 65), or the private securities offerings representative license(Series 82).",
+      "faqAccBody12": "Is a director, executive officer, or a general partner(GP) of a company selling securities(or of a GP of that company).",
+      "faqAccBody13": "Is a \"family client\" of a \"family office\" that qualifies as an accredited investor.",
+      "faqAccBody14": "Is a \"knowledgeable employee\" of a(private) investment fund.",
+      "faqIncomeTitle": "Income",
+      "faqIncomeSubtitle": "What is employment?",
+      "faqIncomeBody1": "Employment is the condition of having paid work. Employed persons have an agreement with another party to render labor services and receive payment in return.",
+      "faqIncomeBody2": "What is annual household income?",
+      "faqIncomeBody3": "Income is money received from work, government assistance or the sale of investments. Household income is the combined income of a group of people living together.",
+      "faqNetWorthTitle": "Networth",
+      "faqNetWorthSubtitle": "What is liquid networth?",
+      "faqNetworthBody1": "Liquid net worth is the amount of money a person owns in cash or cash equivalents, minus the liabilities or debt that they owe. Money in checking and savings accounts as well as marketable securities in taxable accounts are included as part of your liquid net worth. Liabilities like mortgages and credit card debt are subtracted from your liquid net worth.",
+      "faqExperienceTitle": "Experience",
+      "faqExperienceSubtitle": "What is considered experience investing in crypto assets?",
+      "faqExperienceBody1": "Purchasing Bitcoin or other cryptocurrencies as well as NFTs are considered investments in crypto assets.",
+      "faqInvestingTitle": "Investing",
+      "faqInvestingSubtitle": "What is an investment goal?",
+      "faqAInvestingBody1": "Investors should enter into an investment with a goal in mind so they can track their progress and make sound investment decisions. Investors typically intend to earn a profit from their investments, but the time horizon should also be considered. An investor with a goal of saving for retirement should act differently than one who intends to make short term gains.",
+      "textInputPlaceholder": "Enter Amount",
+      "attentionWarning": "Given your current employment status and income, \n the most you can invest is ${{value}}.",
+      "alertWarningZero": "Please enter a valid number.",
+      "alertWarningPeriod": "Please use numbers only.",
+      "bullet": "\u25CF"
+    },
+    "forgotPassword": {
+      "title": "Forgot password",
+      "text": {
+        "instructions": "Enter your email address and we will send you instructions to reset your password."
+      },
+      "action": {
+        "continue": "Continue",
+        "navigateBack": "Back to login"
+      },
+      "checkEmail": {
+        "title": "Check your email",
+        "subtitle": "Please, check the email address {{email}} for instructions to reset your password",
+        "action": {
+          "resendEmail": "Resend Email"
+        }
+      },
+      "changePassword": {
+        "title": "Change your password",
+        "text": {
+          "instructions": "Enter a new password below to change your password."
+        },
+        "newPassword": "New password",
+        "repeatNewPassword": "Repeat password"
+      }
+    },
+    "managedPortfolio": {
+      "title": "Managed Portfolio",
+      "action": {
+        "addFunds": "Add Funds"
+      },
+      "portfolios": {
+        "individualCoins": "Individual Coins",
+        "stableCoins": "Stable Coins",
+        "managedAssets": "Managed Assets"
+      },
+      "tabs": {
+        "myPortfolio": "My Portfolio",
+        "transactions": "Transactions"
+      },
+      "riskCard": {
+        "gain": "Gain avg.",
+        "loss": "Loss avg."
+      },
+      "transactions": {
+        "deposit": "Deposit",
+        "withdrawal": "Withdrawal",
+        "purchase": "Bought with USD/%{paymentMethod}",
+        "swap": "Swap (%{swapFrom} > %{swapTo})",
+        "from": "From",
+        "to": "To",
+        "copied": "Copied!",
+        "paymentMethod": {
+          "bank": "Bank",
+          "debit": "Debit Card"
+        }
+      },
+      "loading": {
+        "title": "You’re almost there",
+        "subtitle": "Sit tight! Our engine is building your personalized portfolio."
+      },
+      "closeManagedPortfolio": {
+        "headerTitle": "Close Managed Portfolio",
+        "title": "Amount to convert",
+        "convertTo": "Convert to:",
+        "walletAddressInputPlaceholder": "Wallet Address",
+        "walletAddressDisclaimer": "\u2022  Ensure that you are only sending {{coin}} to this address",
+        "action": {
+          "proceed": "Proceed"
+        },
+        "closeManagedPortfolioSuccess": {
+          "headerTitle": "Close Portfolio",
+          "title": "Your portfolio is now closed.",
+          "subtitle": "All funds has been transfered to your withdrawal wallet.",
+          "action": {
+            "goToDashboard": "Go to Dashboard"
+          }
+        }
+      }
+    },
+    "stableCoinsDetails": {
+      "title": "Stable Coins",
+      "footerLendingMessageContent": "Lending is the process of temporarily loaning your coins to different borrowers on the blockchain in return for interest payments. Stacked will automatically lend certain stable coins so you can collect additional income through compound interest over time.",
+      "footerLendingMessageTitle": "Lending",
+      "footerStableCoinsMessageContent": "This asset class represents individually purchased and held stablecoins that are part of your overall Managed Portfolio. Stablecoins peg their value on a stable asset, like the US Dollar, and are therefore significanntly less volatile than then other cryptocurrencies."
+    },
+    "transactionStatus": {
+      "paymentHistory": "Payment history",
+      "additionalFunds": "Deposit additional funds:"
+    },
+    "managedPortfolioSuccess": {
+      "title": "Congrats",
+      "userInstructions": "Our experts have built you a portfolio based on your Risk Number",
+      "finishedTheReassessment": "You finished the reassessment!",
+      "initialInvestment": "Initial Investment",
+      "portfolioValue": "Portfolio Value",
+      "new": "New",
+      "current": "Current",
+      "reassessmentActions": {
+        "cancelAndKeepCurrentPortfolio": "Cancel and Keep Current Portfolio",
+        "confirmNewPortfolio": "Confirm New Portfolio"
+      },
+      "modalExitConfirmation": {
+        "title": "Are you sure you want to exit the Managed Portfolio setup?",
+        "subtitle": "Your progress will be saved",
+        "button": {
+          "confirm": "Yes, Continue Later",
+          "cancel": "Cancel"
+        }
+      },
+      "modalCancelReassessment": {
+        "title": "Are you sure?",
+        "subtitle": "The results of your most recent Risk Assessment will be discarded and you will retain your current portfolio",
+        "button": {
+          "confirm": "Discard New Portfolio",
+          "cancel": "Go Back"
+        }
+      },
+      "modalConfirmNewPortfolio": {
+        "title": "Confirm new portfolio",
+        "subtitle": {
+          "firstPartSubtitle": "Your current portfolio's assets will be converted into a new portfolio based on your new Risk Number of ",
+          "secondPartSubtitle": " and trading fees will apply."
+        },
+        "button": {
+          "confirm": "Confirm New Portfolio",
+          "cancel": "Go Back"
+        }
+      },
+      "portfolioComposition": "Portfolio composition",
+      "actions": {
+        "resetRiskNumber": "Reset Risk Number"
+      },
+      "synopsis": "Synopsis",
+      "riskAppetiteCard": {
+        "title": "Risk Appetite",
+        "subtitle": "(6 months)"
+      },
+      "riskNumberComparison": {
+        "title": "Risk Number Comparison",
+        "avoidingRisk": "Avoiding Risk",
+        "seekingRisk": "Seeking Risk"
+      },
+      "averageRiskComparison": {
+        "title": "Average Risk Comparison",
+        "fundPortfolio": "Fund Portfolio"
+      }
+    },
+    "portfolioCryptoDeposit": {
+      "title": "Deposit\nfrom your wallet",
+      "infos": {
+        "generateAddress": "\u2022   Click Generate Address to get access to your {{selectedCoin}} wallet",
+        "sendToAddress": "\u2022   Send {{selectedCoin}} to this deposit address to fund your portfolio",
+        "ensureProperCoin": "\u2022   Ensure that you are only sending {{selectedCoin}} to this address",
+        "windowClosing": "\u2022   This window will close automatically once your deposit is made",
+        "minimumAmount": "\u2022   Minumum amount to deposit is $100"
+      },
+      "waiting": "Waiting for deposit",
+      "investimentAmount": "Investment Amount",
+      "requiredDepositAmount": "Required Deposit amount",
+      "address": {
+        "valueLabel": "Deposit Address:",
+        "generate": "Generate Address"
+      }
+    },
+    "walletAddress": {
+      "title": "Wallet Address",
+      "firstSubtitle": "Send only {{coinType}} tokens to this address.",
+      "secondSubtitle": "Sending coin or token other than {{coinType}} to this address may result in the loss of your deposit.",
+      "networkOptions": {
+        "ethMainnet": "Etherum Mainnet",
+        "btcNetwork": "Bitcoin Network",
+        "binanceSmartChain": "Binance Smart Chain"
+      },
+      "action": {
+        "share": "Share Address"
+      }
+    },
+    "withdrawConfirmation": {
+      "title": "Withdraw",
+      "subtitle": "Do you want to send",
+      "secondPartSubtitle": "to",
+      "conversion": {
+        "asset": "ASSET",
+        "before": "BEFORE",
+        "after": "AFTER"
+      },
+      "withdrawSummary": {
+        "fee": "{{coinType}} fee",
+        "transactionTime": "Expected transaction time",
+        "toBeReceived": "To be received"
+      },
+      "actions": {
+        "confirm": "Yes, I'm sure",
+        "cancel": "Cancel"
+      }
+    },
+    "explainerSeriesCarousel": {
+      "firstSlide": {
+        "title": "Welcome to Stacked",
+        "subtitle": "A simpler and smarter way to invest and manage your crypto."
+      },
+      "secondSlide": {
+        "title": "Build Wealth with Stacked Managed Portfolios",
+        "subtitle": "Get professionally managed crypto portfolios tailored to you."
+      },
+      "thirdSlide": {
+        "title": "Buy, sell, and hold crypto with Stacked Wallet",
+        "subtitle": "Purchase crypto with your credit card or bank account."
+      },
+      "fourthSlide": {
+        "title": "Start your journey investing in crypto"
+      },
+      "action": {
+        "signIn": {
+          "title": "Log In"
+        },
+        "signUp": {
+          "title": "Sign Up"
+        }
+      }
+    },
+    "signIn": {
+      "title": "Log In",
+      "text": {
+        "noAccount": "Don’t have Stacked account?"
+      },
+      "action": {
+        "forgotPassword": "Forgot password?",
+        "signIn": "Log in",
+        "signUp": "Sign Up"
+      },
+      "validations": {
+        "passwordCharacters": "Password must have at least 6 characters",
+        "passwordRequired": "Password is required",
+        "credentialsError": "Email or password is incorrect."
+      },
+      "signInForm": {
+        "formTitles": {
+          "email": "Email",
+          "password": "Password"
+        }
+      }
+    },
+    "signUp": {
+      "title": "Sign Up",
+      "text": {
+        "agreement": "I read and agree to the terms of the Stacked user agreement",
+        "haveAccount": "Already have an account?"
+      },
+      "action": {
+        "signUp": "Register with Email Address",
+        "signIn": "Log in"
+      },
+      "signUpForm": {
+        "terms": "Click here to read and agree to the terms of the",
+        "newsletter": "Click here to opt in to the Stacked newsletter",
+        "termsButton": "Stacked user agreement",
+        "userAgreement": {
+          "title": "Stacked user agreement"
+        },
+        "emailConfirmation": {
+          "checkEmailTitle": "Check your email",
+          "checkEmailText": "Please check your email to complete your account registration",
+          "checkEmailButton": "Resend Email"
+        },
+        "formTitles": {
+          "name": "Full Name",
+          "email": "Email",
+          "password": "Password",
+          "confirmPassword": "Confirm password"
+        },
+        "validations": {
+          "credentialsError": "This account already exists or has invalid info.",
+          "nameMinimumLength": "Name must have at least 3 characters",
+          "nameRequired": "Name is required",
+          "countryRequired": "Select your country",
+          "stateRequired": "Select your state",
+          "agreementAccepted": "The User Agreement must be accepted."
+        }
+      }
+    },
+    "exchanges": {
+      "title": "My Accounts",
+      "text": {
+        "instructions": "You don’t have any connected exchanges. Add your first exchange to begin."
+      },
+      "action": {
+        "addExchange": "Add exchange",
+        "continueSetup": "Continue setup"
+      },
+      "connectExchange": "Connect an exchange or fund your Stacked Wallet"
+    },
+    "stacks": {
+      "text": {
+        "instructions": "Diversify your crypto into pre-built Stacks"
+      }
+    },
+    "dashboard": {
+      "connectExchange": "Connect\nan exchange to start",
+      "tryProducts": "Try our products",
+      "cards": {
+        "selfDirected": {
+          "title": "Self-Directed",
+          "message": "Add your favorite coins to your portfolio",
+          "emptyAssets": {
+            "addExchange": {
+              "label": "Add a new exchange account to Stacked",
+              "buttonLabel": "Add exchange"
+            },
+            "exchangeNotConnected": {
+              "label": "Exchange not connected",
+              "buttonLabel": "Connect Exchange"
+            },
+            "walletNotConfigured": {
+              "label": "You have not yet configured your Stacked Wallet",
+              "depositButtonLabel": "Make Deposit",
+              "buyCryptoButtonLabel": "Buy Crypto"
+            }
+          }
+        },
+        "managedPortfolio": {
+          "title": "Managed Portfolio",
+          "initialMessage": "Create a personalized managed portfolio with investment strategies built by industry experts",
+          "continueMessage": "Continue building your personalized managed portfolio",
+          "restoreMessage": "Restore your managed portfolio built by industry experts",
+          "continuePortfolioAction": "Continue Setup",
+          "restorePortfolioAction": "Restore Managed Portfolio",
+          "relocatingCountdown": "%{countdown} min until portfolio is re-allocated"
+        },
+        "reviewNewPortfolio": {
+          "title": "Review Your New Portfolio",
+          "description": "View your new portfolio based on your latest risk reassessment",
+          "new": "New"
+        }
+      },
+      "stacks": {
+        "title": "Stacks",
+        "text": "Invest like a pro with pre-build Stacks"
+      },
+      "lending": {
+        "title": "Lending",
+        "text": "Lend your tokens to earn interest",
+        "estReward": "Estimated Reward"
+      },
+      "staking": {
+        "title": "Staking",
+        "text": "Stake your tokens to earn rewards",
+        "totalRewards": "Total rewards"
+      },
+      "bots": {
+        "title": "Bots",
+        "activeBots": "Active bots",
+        "totalPnl": "Total PNL"
+      },
+      "exchangeCards": {
+        "allAssets": "All Assets",
+        "stackedWallet": "Stacked Wallet"
+      },
+      "trendingCoins": "Trending coins",
+      "portfolioValue": "Portfolio Total Value",
+      "pnlToday": "PNL for today",
+      "thisMonthPnl": "This month PNL",
+      "asset": "Asset",
+      "price": "Price",
+      "change": "Change",
+      "myAssets": "My Assets",
+      "noAssets": "You have no assets yet"
+    },
+    "welcome": {
+      "title": "Welcome to Stacked Managed Portfolios",
+      "initialSubtitle": "Professionally managed crypto portfolios with expert investment strategies tailored to you.",
+      "continueSubtitle": "Continue building your personalized digital managed portfolio with investment strategies curated by industry experts.",
+      "watchVideo": "Watch Video",
+      "initialPortfolioAction": "Build My Portfolio",
+      "continuePortfolioAction": "👀   Review My Portfolio",
+      "cryptoAction": "Buy Crypto Now"
+    },
+    "feedback": {
+      "message": "Send us your thoughts or ideas",
+      "fields": {
+        "name": {
+          "title": "Name",
+          "error": "Name is required"
+        },
+        "email": {
+          "title": "Email",
+          "error": "Email is required"
+        },
+        "feedback": {
+          "placeholder": "It would be awesome if...",
+          "error": "Feedback is required"
+        }
+      },
+      "buttonLabel": "Submit Feedback"
+    },
+    "profile": {
+      "title": "Profile",
+      "details": "Profile details",
+      "closeAccount": {
+        "titleInput": "Reason for closing account (optional)",
+        "inputPlaceholder": "Please enter text...",
+        "actions": {
+          "cancel": "Go Back",
+          "close": "Close account"
+        }
+      },
+      "action": {
+        "edit": "Edit",
+        "changePassword": "Change Password",
+        "closeAccount": {
+          "title": "Close account",
+          "discloser": "Closing your account can’t be undone. Please make sure your\naccount balance is $0.00 before you begin."
+        },
+        "logout": "Log Out",
+        "save": "Save",
+        "cancel": "Cancel"
+      },
+      "security": {
+        "title": "Security",
+        "enable2fa": "Enable 2FA",
+        "description": "To secure your account with Stacked it is necessary to enable an additional one-time password with Google Authenticator or Authy upon login."
+      },
+      "tooltip": {
+        "saved": "Saved!"
+      },
+      "error": {
+        "fullNameRequired": "Full name is required",
+        "emailAlreadyExists": "Email already exists",
+        "usernameAlreadyExists": "Username already exists"
+      },
+      "modalDisable2FA": {
+        "title": "Are you sure you want to disable 2FA?",
+        "button": {
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "stackedWallet": {
+      "empty": {
+        "title": "Stacked Wallet",
+        "description": "Buy, sell, and hold crypto with Stacked Wallet",
+        "buttonDeposit": "Deposit",
+        "buttonBuy": "Buy Crypto"
+      },
+      "populated": {
+        "walletBalance": "Wallet Balance",
+        "actions": {
+          "withdraw": "Withdraw",
+          "deposit": "Deposit",
+          "swap": "Swap",
+          "scanQrCode": "Scan QR"
+        },
+        "tabs": {
+          "tokens": "Tokens",
+          "transactions": " Transactions",
+          "button": "Buy crypto"
+        }
+      },
+      "simpleSwap": {
+        "headerTitle": "Swap One to One",
+        "swapButtonText": "Swap",
+        "marketVolatilityMessage": "Swap rate may change between quotation and execution due to market volatility",
+        "youWillGet": "You’ll get",
+        "maxText": "Max",
+        "available": ") available",
+        "insufficientBalance": "Insufficient",
+        "toSwap": "to Swap",
+        "from": "From",
+        "to": "To",
+        "findCoins": "Find Coins",
+        "selectDifferentCoins": "Please select different coins to convert"
+      },
+      "withdraw": {
+        "title": "Withdraw",
+        "selectCoinModalTitle": "Select Coin",
+        "walletAddressInputPlaceholder": "Wallet Address",
+        "walletAddressMessage": "\u2022  Ensure that you are inputting only a {{coin}} address"
+      },
+      "manyToOneSwap": {
+        "headerTitle": "Swap Many to One",
+        "fromTitle": "Choose coins to swap from",
+        "searchPlaceholder": "Find coin",
+        "buttonNext": "Next",
+        "slidersScreen": {
+          "title": "YOU GIVE",
+          "footerTitle": "YOU’LL GET",
+          "maxAll": "Max all"
+        }
+      },
+      "manyToOneSelectTo": {
+        "title": "Choose coin to swap to",
+        "emptyStateText": "No coins available",
+        "searchPlaceholder": "Find coin",
+        "stableCoins": "Stable Coins",
+        "myCoins": "My Coins",
+        "notOwned": "Not Owned"
+      },
+      "oneToManySelectFrom": {
+        "headerTitle": "Swap One to Many",
+        "fromTitle": "Choose coin to swap from",
+        "searchPlaceholder": "Find coin",
+        "emptyStateText": "No coins available"
+      },
+      "oneToManySelectTo": {
+        "headerTitle": "Swap One to Many",
+        "toTitle": "Choose coins to swap to",
+        "searchPlaceholder": "Find coin",
+        "emptyStateText": "No coins available",
+        "buttonNext": "Next",
+        "myCoins": "My Coins",
+        "notOwned": "Not Owned"
+      }
+    },
+    "chooseInvestment": {
+      "title": "I want to invest",
+      "errors": {
+        "minInvestment": "The minimum investment is $100",
+        "maxInvestment": "The maximum investment is $9,999,999"
+      },
+      "paymentMethod": {
+        "debitOrBank": {
+          "title": "Debit or bank account",
+          "description": "Maximum $30k per transaction"
+        },
+        "directFromWallet": {
+          "title": "Direct from wallet",
+          "description": "Make a direct crypto deposit"
+        },
+        "coinbase": {
+          "title": "Coinbase one-click",
+          "description": "Authorize Coinbase to make a deposit"
+        }
+      },
+      "proceed": "Proceed to funding",
+      "confirmInvestmentModal": {
+        "title": "Are you sure?",
+        "description": "You are agreeing to deposit {{amountValue}}\ninto your portfolio. You understand that\nall investing involves risk, including the risk of principal.",
+        "fund": "Fund Portfolio",
+        "goBack": "Go Back"
+      }
+    },
+    "riskalyze": {
+      "title": "Managed Portfolio",
+      "reTakeAssessment": {
+        "title": "Are you sure?",
+        "subTitle": "The results of your most recent Risk Assessment will be discarded and you will retain your current Managed Portfolio",
+        "actions": {
+          "cancel": "Cancel",
+          "stopReAssessment": "Stop Risk Assessment"
+        }
+      }
+    }
+  },
+  "swap": {
+    "options": {
+      "oneToOne": "One to One",
+      "manyToOne": "Many to One",
+      "oneToMany": "One to Many"
+    },
+    "inProgress": {
+      "coins": " coins",
+      "into": " into ",
+      "description": "Transaction may take 3-5 minutes. Please, wait..."
+    },
+    "confirmations": {
+      "confirmButton": "Yes, I’m Sure",
+      "backButton": "Back",
+      "title": "Swap One to One",
+      "simple": {
+        "confirmationMessage": "Do you want to swap \n",
+        "into": " into ",
+        "informationMessage": "Swap rate may change between quotation and execution due to market volatility"
+      },
+      "multiple": {
+        "confirmationMessage": "Your Stacked Wallet distribution will be changed to:",
+        "informationMessage": " Swap rate may change between quotation and execution due to market volatility. For better accuracy, we suggest that you use refresh rate functionality."
+      }
+    },
+    "status": {
+      "success": {
+        "title": "Swap\nsuccessful!",
+        "action": "Back to Wallet"
+      },
+      "error": {
+        "title": "Something went wrong.\nPlease try again.",
+        "message": "The exchange rejected your swap because of some specific details from the back-end",
+        "action": "Retry Swap",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "withdrawError": {
+    "headerTitle": "Withdraw",
+    "title": "Something went wrong.\nPlease try again.",
+    "message": "The exchange rejected your swap because of some specific details from the back-end",
+    "action": "Try again",
+    "cancel": "Cancel"
+  },
+  "errorScreen": {
+    "title": "Something went wrong!",
+    "friendlySubtitle": "This is the screen that your users will see in production when an error is thrown. You'll want to customize this message (located in `app/i18n/en.json`) and probably the layout as well (`app/screens/error`). If you want to remove this entirely, check `app/app.tsx` for the <ErrorBoundary> component.",
+    "traceTitle": "Error from %{name} stack",
+    "reset": "RESET APP"
+  },
+  "validations": {
+    "email": {
+      "isRequired": "Email is required",
+      "notValid": "Email address is invaild"
+    },
+    "password": {
+      "isRequired": "Password is required",
+      "size": "Password should have at least 6 characters",
+      "oneCapitalLetterValidation": "Password should have at least one capital letter (A-Z)",
+      "oneSpecialCharacterValidation": "Password should have at least one special character (!@#$%^&*)",
+      "confirmIsRequired": "Confirm password is required",
+      "confirmMustMatch": "Confirm password must match password"
+    },
+    "oneTimeCode": {
+      "isRequired": "One time code is required",
+      "size": "One time code must have 6 characters",
+      "rules": "One time code must be numeric"
+    },
+    "fullName": {
+      "nameAndLastName": "Name requires First Name and Last Name"
+    }
+  },
+  "common": {
+    "fiatSign": "$"
+  },
+  "currency": {
+    "suffix": {
+      "billion": "B",
+      "million": "M"
+    }
+  }
+}

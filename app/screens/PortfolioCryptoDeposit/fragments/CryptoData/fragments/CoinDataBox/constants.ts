@@ -1,0 +1,1 @@
+export const CHANGE_ICON_INTERVAL = 3000;

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "283922464738",
+    "project_id": "analytics-integration-67d7c",
+    "storage_bucket": "analytics-integration-67d7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283922464738:android:88506606c5d587aa6ac3bb",
+        "android_client_info": {
+          "package_name": "com.stackedinvest.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283922464738-vns1a5lq9l03l6tvsi0amoigqls9l4ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQcAoNrH_lEgjOjl1FJZiyHlanucClY3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283922464738-vns1a5lq9l03l6tvsi0amoigqls9l4ba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

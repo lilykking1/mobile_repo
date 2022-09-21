@@ -1,0 +1,1 @@
+jest.mock('react-native-appsflyer', () => jest.fn());
